@@ -1,3 +1,21 @@
+<?php
+
+// if(isset($_POST['submit']) )
+// {
+//   print_r($_POST['name'])
+//   print_r($_POST['email'])
+//   print_r($_POST['username'])
+//   print_r($_POST['password'])
+// }
+
+$name = $_POST ['name'];
+$email = $_POST['email'];
+$username = $_POST['username']
+$password = $_POST['password']
+
+$result = mysqli_query($conexao, "INSERT INTO usuario(name, email, username,password) VALUES ($name, $email, $username, $password)");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +27,11 @@
   <title>Formulario de Login</title>
 </head>
 <body>
-  <form action="">
+  
   <div>
     <h1>Sign up</h1>
   </div>
+  <form action="formulario.php" method = "POST">
   <nav class="box">
     <div>
       <label for="name">Name</label>
@@ -20,24 +39,25 @@
     </div>
     <div>
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+      <input type="email" id="email" name="email">
      <div>
       <label for="username">Username</label>
       <input type="text" id="username" name="username">
     </div>
     <div>
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" required minlength="3" placeholder="Digite sua senha" >
+      <input type="password" id="password" name="password" required minlength="3">
     </div>
     <div class="checkbox">
       <input type="checkbox" id="termos" name="termos" value="termos" />
       <label for="termos">I accept the terms of use.</label>
+      <input type="submit" name="submit" id="submit">
+      <button>Enviar</button>
+      <input type="submit" name="submit" id="submit">
     </div>
-    <div>
-      <input type="submit" value="Entrar">
-    </div>
+  
   </nav>
-</form>
+  </form>
 
 </body>
 </html>

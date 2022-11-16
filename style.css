@@ -22,14 +22,11 @@ input {
   height: 20px;
   margin: 0px;
 }
-button{
-  margin-top: 20px;
-  text-align: center;
-}
+
 h1{
   text-align: center;
  
 }
 body{
-  background-image: url("./img/pexels-alexander-kovalev-2847648.jpg");
+  background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71))
 }
