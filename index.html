@@ -13,26 +13,27 @@
     <h1>Sign up</h1>
   </div>
   <div class ='box'>
-  <form action="">
+  <form name="login" id="login" action="">
     <fieldset>
   <nav>
     <div>
       <label for="name">Name</label>
-      <input type="text" id="name" name="name">
+      <input type="text" id="name" name="name" required>
     </div>
     <div>
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+      <span class="erro" ></span>
      <div>
       <label for="username">Username</label>
-      <input type="text" id="username" name="username">
+      <input type="text" id="username" name="username" required minlength="4">
     </div>
     <div>
       <label for="password">Password</label>
       <input type="password" id="password" name="password" required minlength="3" placeholder="Digite sua senha" >
     </div>
     <div class="checkbox">
-      <input type="checkbox" id="termos" name="termos" value="termos" />
+      <input type="checkbox" id="termos" name="termos" value="termos" required />
       <label for="termos">I accept the terms of use.</label>
     </div>
     <div>
@@ -42,5 +43,6 @@
 </fieldset>
 </form>
 </div>
+<script src="./script.js"></script>
 </body>
 </html>
